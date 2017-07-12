@@ -10,9 +10,48 @@
 
   <body>
     <div class="container">
-      <form>
-        
+      <div class="jumbotron">
+        <h2>Pizza on Da-GO!</h2>
+      </div>
+      <form id="orderForm">
+        <div class="form-group">
+          <label for="pizzaSize">Choose your toppings below:</label><br><br>
+          <p>Sauces:</p>
+          <input type="checkbox" name="orderToppings" value="sauce"> Red Sauce<br>
+          <input type="checkbox" name="orderToppings" value="sauce"> White Sauce<br><br>
+          <p>Cheese options:</p>
+          <input type="checkbox" name="orderToppings" value="cheese"> Cheese<br>
+          <input type="checkbox" name="orderToppings" value="cheese"> Vegan Cheese<br><br>
+          <p>Veggies:</p>
+          <input type="checkbox" name="orderToppings" value="veggies"> Sweet Red Onions<br>
+          <input type="checkbox" name="orderToppings" value="veggies"> Peppers<br>
+          <input type="checkbox" name="orderToppings" value="veggies"> Black Olives<br>
+          <input type="checkbox" name="orderToppings" value="veggies"> Mushroom<br>
+          <input type="checkbox" name="orderToppings" value="veggies"> Spincach<br><br>
+          <p>Meats & Beyond:</p>
+          <input type="checkbox" name="orderToppings" value="meats"> House Made Pepperoni<br>
+          <input type="checkbox" name="orderToppings" value="meats"> Locally Sourced Organic Chicken<br>
+          <input type="checkbox" name="orderToppings" value="meats"> Locally Sourced Organic Ground Beef<br>
+          <input type="checkbox" name="orderToppings" value="meats"> House made Nut & Black Bean Crumble<br><br>
+        </div>
+        <div class="pizzaSize">
+          <label for="pizzaSize">Choose you pize size:</label>
+          <select class="form-control" id="movieInput">
+            <option>10" Personal Pie</option>
+            <option>15" Medium</option>
+            <option>20" Large</option>
+            <option>25" Family Size Pie</option>
+          </select>
+        </div><br><br>
+       <button type="submit">See Order</button>
       </form>
+      <span id="orderSummary">
+        <p><b>Your Pie toppings and size:</b></p>
+      </span>
+      <br>
+      <span id="deliverySummary">
+        <p><b>Your delivery location:</b></p>
+      </span>
     </div>
   </body>
 

@@ -17,25 +17,13 @@ Bootstrap and JQuery codes are included in the file structure and referred to in
 
 ## Specifications
 
-* It can count up to the user input number
-  * Example Input: 2
-  * Example Output: [1,2]
-  * Example Input: 3
-  * Example Output: [1,2,ping]
-  * Example Input: 4
-  * Example Output: [1,2,ping,4]
-  * Example Input: 5
-  * Example Output: [1,2,ping,4,pong]...
-  * Example Input: 15
-  * Example Output: [1,2,ping,4,pong,ping,7,8,ping,pong,11,ping,13,ping,PINGPONG!]
-  * Example Input: NaN
-  * Example Output: error message indicating to input a number
-  * Example Input: 0 or less than 0
-  * Example Output: error message indicating to enter a positive number
+* It can take users selection and return a total cost
+  * User select toppings/size input: selectors output: total price
+  * User input: information output: receipt showing delivery info
 
 ## Known Bugs
 
-_This code does not deal with high value inputs, am still working out a way around this.  Please submit a request if you have any input._
+_Please submit a request if you have any input bugs or issues with output._
 
 ## Support and contact details
 
