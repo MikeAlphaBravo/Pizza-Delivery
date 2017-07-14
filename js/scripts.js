@@ -1,5 +1,23 @@
 //business logic (Back-end)
 
+var sauce = { name: "Sauce", price: 1.00 };
+var cheese = { name: "Cheese", price: 1.00 };
+var veggies = { name: "Veggies", price: 1.00 };
+var meats = { name: "Meats", price: 2.00 };
+var totalToppings = { name: "Your Pie Specs", products: [sauce, cheese, veggies, meats] };
+
+var smallSize = { name: "Small", price: 5.00 };
+var mediumSize = { name: "Medium", price: 8.00 };
+var largeSize = { name: "Large", price: 11.00 };
+var xlargeSize = { name: "XLarge", price: 15.00 };
+var totals = { name: "Your total cost", products: [totalToppings, smallSize, mediumSize, largeSize, xlargeSize]}
+
+// totals.forEach(function(total) {
+//   console.log(total.name + " sells:");
+//   total.products.forEach(function(product) {
+//     console.log(product.name);
+// });
+
 function Order(sauce, cheese, veggies, meats, size) {
   this.choiceSauce = sauce;
   this.choiceCheese = cheese;
@@ -43,24 +61,24 @@ function Order(sauce, cheese, veggies, meats, size) {
 
 $(document).ready(function() {
 
-      $("form#orderForm").submit(function(event) {
-        event.preventDefault();
-          $("#orderSummary").show();
-          $("input:checkbox[name=orderToppings]:checked").each(function(){
-            var listOrderToppings = $(this).val();
-            $('#orderSummary').append(listOrderToppings + "<br>");
-          });
-          // $("#deliverySummary").show();
-          // $("input:checkbox[name=orderSize]:checked").each(function(){
-          //   var listOrderSize = $(this).val();
-          //   $('#pizzaSize').append(listOrderSize + "<br>");
-          // });
-        $('#orderForm').hide();
-    });
+  $("form#orderForm").submit(function(event) {
+    event.preventDefault();
+      $("#orderSummary").show();
+      $("input:checkbox[name=orderToppings]:checked").each(function(){
+        var listOrderToppings = $(this).val();
+        $('#orderSummary').append(listOrderToppings + "<br>");
+      });
+      var inputtedPizzaCombo = $("input#pizzaCombo").val();
 
-    // var inputtedPizzaCombo = $("input#pizzaCombo").val();
-    // var inputtedPizzaSize = $("input#pizzaSize").val();
-    // var newOrder = new Order(inputtedPizzaCombo, inputtedPizzaSize);
+      // $("#deliverySummary").show();
+      // $("input:checkbox[name=orderSize]:checked").each(function(){
+      //   var listOrderSize = $(this).val();
+      //   $('#pizzaSize').append(listOrderSize + "<br>");
+      // });
+    $('#orderForm').hide();
+  });
+
+});
 
     // var inputtedFirstName = $("input#new-first-name").val();
     // var inputtedLastName = $("input#new-last-name").val();
@@ -88,4 +106,3 @@ $(document).ready(function() {
     // });
 
     // resetFields();
-});
