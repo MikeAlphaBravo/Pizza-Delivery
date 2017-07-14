@@ -1,30 +1,29 @@
 //business logic (Back-end)
 
-var sauce = { name: "Sauce", price: 1.00 };
-var cheese = { name: "Cheese", price: 1.00 };
-var veggies = { name: "Veggies", price: 1.00 };
-var meats = { name: "Meats", price: 2.00 };
-var totalToppings = { name: "Your Pie Specs", products: [sauce, cheese, veggies, meats] };
+//global scope variable
+var newPizza;
 
-var smallSize = { name: "Small", price: 5.00 };
-var mediumSize = { name: "Medium", price: 8.00 };
-var largeSize = { name: "Large", price: 11.00 };
-var xlargeSize = { name: "XLarge", price: 15.00 };
-var totals = { name: "Your total cost", products: [totalToppings, smallSize, mediumSize, largeSize, xlargeSize]}
-
-// totals.forEach(function(total) {
-//   console.log(total.name + " sells:");
-//   total.products.forEach(function(product) {
-//     console.log(product.name);
-// });
-
-function Order(sauce, cheese, veggies, meats, size) {
+function pizzaParts (sauce, cheese, veggies, meats, size toppingsList) {
   this.choiceSauce = sauce;
   this.choiceCheese = cheese;
   this.choiceVeggies = veggies;
   this.choiceMeats = meats;
   this.choiceSize = size;
+  this.toppingsList = toppingsList;
 }
+
+function pizzaBuild() {
+  var inputtedSauce = [];
+  var inputtedCheese = [];
+  var inputtedVeggies = [];
+  var inputtedMeats = [];
+  var inputtedSize = $("select#pizzaSize").val();
+  var calculatedToppingsList;
+}
+
+newPizza = new Pizza(inputtedSauce, inputtedCheese, inputtedVeggies, inputtedMeats, inputtedSize, 0);
+newPizza.toppingsList = newPizza.sauce.length + newPizza.cheese.length + newPizza.veggies.length + newPizza.meats.length;
+
 
 // function Contact(first, last) {
 //   this.firstName = first;
@@ -57,6 +56,9 @@ function Order(sauce, cheese, veggies, meats, size) {
 //     $("input.new-zipCode").val("");
 // }
 
+
+
+
 //user logic (Front-end)
 
 $(document).ready(function() {
@@ -64,9 +66,14 @@ $(document).ready(function() {
   $("form#orderForm").submit(function(event) {
     event.preventDefault();
       $("#orderSummary").show();
-      $("input:checkbox[name=orderToppings]:checked").each(function(){
-        var listOrderToppings = $(this).val();
-        $('#orderSummary').append(listOrderToppings + "<br>");
+      $("input:checkbox[name=sauce]:checked").each(function(){
+        var sauce = $(this).val();
+      $("input:checkbox[name=cheese]:checked").each(function(){
+        var cheese = $(this).val();
+      $("input:checkbox[name=veggies]:checked").each(function(){
+        var veggies = $(this).val();
+      $("input:checkbox[name=meats]:checked").each(function(){
+        var meats = $(this).val();
       });
       var inputtedPizzaCombo = $("input#pizzaCombo").val();
 
