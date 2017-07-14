@@ -43,12 +43,24 @@ function Order(sauce, cheese, veggies, meats, size) {
 
 $(document).ready(function() {
 
-  $("form#orderForm").submit(function(event) {
-    event.preventDefault();
+      $("form#orderForm").submit(function(event) {
+        event.preventDefault();
+          $("#orderSummary").show();
+          $("input:checkbox[name=orderToppings]:checked").each(function(){
+            var listOrderToppings = $(this).val();
+            $('#orderSummary').append(listOrderToppings + "<br>");
+          });
+          // $("#deliverySummary").show();
+          // $("input:checkbox[name=orderSize]:checked").each(function(){
+          //   var listOrderSize = $(this).val();
+          //   $('#pizzaSize').append(listOrderSize + "<br>");
+          // });
+        $('#orderForm').hide();
+    });
 
-    var inputtedPizzaCombo = $("input#pizzaCombo").val();
-    var inputtedPizzaSize = $("input#pizzaSize").val();
-    var newOrder = new Order(inputtedPizzaCombo, inputtedPizzaSize);
+    // var inputtedPizzaCombo = $("input#pizzaCombo").val();
+    // var inputtedPizzaSize = $("input#pizzaSize").val();
+    // var newOrder = new Order(inputtedPizzaCombo, inputtedPizzaSize);
 
     // var inputtedFirstName = $("input#new-first-name").val();
     // var inputtedLastName = $("input#new-last-name").val();
@@ -76,6 +88,4 @@ $(document).ready(function() {
     // });
 
     // resetFields();
-
-  });
 });
