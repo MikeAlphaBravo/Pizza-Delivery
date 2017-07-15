@@ -1,8 +1,8 @@
-#orderSummary, #deliverySummary {
+#orderSummary {
   display: none;
 }
 
-#show-contact {
+/*#show-contact {
   display: none;
 }
 
@@ -13,4 +13,4 @@
 
 .contact:hover {
   text-decoration: underline;
-}
+}*/

@@ -1,6 +1,6 @@
 # _Pizza-Delivery_
 
-#### _Object Oriented Design Project for Epicodus, June 24, 2017_
+#### _Object Oriented Design Project for Epicodus, July 13, 2017_
 
 #### By _**Michael A. Brooks
   *and the countless generous souls who've looked at my work and helped along the way**_

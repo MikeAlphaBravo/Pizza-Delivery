@@ -13,7 +13,7 @@
       <div class="jumbotron">
         <h2>Pizza on Da-GO!</h2>
       </div>
-      <form id="orderForm">
+      <form class="orderForm">
         <div class="form-group">
           <h4>Build your Pie:</h4>
           <label for="pizzaCombo">Sauces:</label><br>
@@ -34,25 +34,29 @@
           <input type="checkbox" name="meats" value="Locally Sourced Organic Ground Beef" id="pizzaCombo"> Locally Sourced Organic Ground Beef<br>
           <input type="checkbox" name="meats" value="House made Nut & Black Bean Crumble"> House made Nut & Black Bean Crumble<br><br>
           <label for="pizzaCombo">Choose you pize size:</label><br>
-          <!-- <select class="form-control" id="pizzaSize">
-            <option>10" Personal Pie</option>
-            <option>15" Medium</option>
-            <option>20" Large</option>
-            <option>25" Family Size Pie</option>
-          </select> -->
-          <input type="checkbox" name="orderToppings" value="10in. Personal Pie" id="pizzaCombo"> 10" Personal Pie<br>
+          <select class="form-control" id="pizzaSize">
+            <option>10in. Personal Pie</option>
+            <option>15in. Medium</option>
+            <option>20in. Large</option>
+            <option>25in. Family Size Pie</option>
+          </select>
+          <!-- <input type="checkbox" name="orderToppings" value="10in. Personal Pie" id="pizzaCombo"> 10" Personal Pie<br>
           <input type="checkbox" name="orderToppings" value="15in. Medium" id="pizzaCombo"> 15" Medium<br>
-          <input type="checkbox" name="orderToppings" value="20in. Large" Large" id="pizzaCombo"> 20" Large<br>
+          <input type="checkbox" name="orderToppings" value="20in. Large" Large" id="pizzaCombo"> 20" Large<br> -->
         </div><br>
        <button type="submit" class="btn">See Order</button>
       </form>
-      <span id="orderSummary">
-        <p><b>Your Pie toppings and size:</b></p>
-      </span>
-      <br>
+      <div class="orderSummary">
+        <span id="orderSummary">
+          <p><b>Your Pie toppings and size:<span id="selectedSize"></span></b></p>
+        </span>
+          <p><b>Your Pie will cost $<span id="totalCost"></span></b></p>
+      </div>
+
+      <!-- <br>
       <span id="deliverySummary">
         <p><b>Your delivery location:</b></p>
-      </span>
+      </span> -->
 
 
       <!-- <h4>Delivery Information:</h4>
