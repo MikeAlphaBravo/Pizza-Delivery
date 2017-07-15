@@ -14,14 +14,60 @@
         <h2>Pizza on Da-GO!</h2>
       </div>
       <form class="orderForm">
+        <label for="name">Enter the name for delivery:</label>
+        <input id="inputName" type="text"><br>
+      </form>
+      <div id="hidden-section">
+        <form id="ingredientsForm">
+          <div class="form-group">
+            <h2>Toppings</h2>
+            <input type="checkbox" name="toppings" value="red-sauce"> Red Sauce<br>
+            <input type="checkbox" name="toppings" value="white-sauce"> White Sauce<br>
+            <input type="checkbox" name="toppings" value="cheese"> Cheese<br>
+            <input type="checkbox" name="toppings" value="vegan-cheese"> Vegan Cheese<br>
+            <input type="checkbox" name="toppings" value="onions"> Sweet Red Onions<br>
+            <input type="checkbox" name="toppings" value="olives"> Black Olives<br>
+            <input type="checkbox" name="toppings" value="chicken"> Locally Sourced Organic Chicken<br>
+            <input type="checkbox" name="toppings" value="ground-not-beef"> Handmade Ground Black Bean and Walnut Paste<br>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="size" value="small">10in. Personal Pie
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="size" value="medium">15in. Medium Pie
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="size" value="large">20in. Family Pie
+            </label>
+          </div>
+          <button type="submit" id="submitOrder">Total</button>
+        </form>
+      </div>
+      <div class="results">
+        <h2>Your order total: $<span id="orderTotal"></span></h2>
+        <h3 id="outputName"></h3>
+      </div>
+    </div>
+  </body>
+</html>
+
+
+
+<!--
+      <form class="orderForm">
         <div class="form-group">
           <h4>Build your Pie:</h4>
           <label for="pizzaCombo">Sauces:</label><br>
-          <input type="checkbox" name="sauce" value="Red Sauce" id="pizzaCombo"> Red Sauce<br>
-          <input type="checkbox" name="sauce" value="White Sauce" id="pizzaCombo"> White Sauce<br><br>
+          <input type="checkbox" name="sauces" value="Red Sauce" id="pizzaCombo"> Red Sauce<br>
+          <input type="checkbox" name="sauces" value="White Sauce" id="pizzaCombo"> White Sauce<br><br>
           <label for="pizzaCombo">Cheese Options:</label><br>
-          <input type="checkbox" name="cheese" value="Cheese" id="pizzaCombo"> Cheese<br>
-          <input type="checkbox" name="cheese" value="Vegan Cheese" id="pizzaCombo"> Vegan Cheese<br><br>
+          <input type="checkbox" name="cheeses" value="Cheese" id="pizzaCombo"> Cheese<br>
+          <input type="checkbox" name="cheeses" value="Vegan Cheese" id="pizzaCombo"> Vegan Cheese<br><br>
           <label for="pizzaCombo">Veggies:</label><br>
           <input type="checkbox" name="veggies" value="Sweet Red Onions" id="pizzaCombo"> Sweet Red Onions<br>
           <input type="checkbox" name="veggies" value="Peppers" id="pizzaCombo"> Peppers<br>
@@ -39,11 +85,11 @@
             <option>15in. Medium</option>
             <option>20in. Large</option>
             <option>25in. Family Size Pie</option>
-          </select>
+          </select> -->
           <!-- <input type="checkbox" name="orderToppings" value="10in. Personal Pie" id="pizzaCombo"> 10" Personal Pie<br>
           <input type="checkbox" name="orderToppings" value="15in. Medium" id="pizzaCombo"> 15" Medium<br>
           <input type="checkbox" name="orderToppings" value="20in. Large" Large" id="pizzaCombo"> 20" Large<br> -->
-        </div><br>
+        <!-- </div><br>
        <button type="submit" class="btn">See Order</button>
       </form>
       <div class="orderSummary">
@@ -52,7 +98,7 @@
         </span>
           <p><b>Your Pie will cost $<span id="totalCost"></span></b></p>
       </div>
-
+ -->
       <!-- <br>
       <span id="deliverySummary">
         <p><b>Your delivery location:</b></p>
@@ -108,9 +154,3 @@
 
         </ul>
       </div> -->
-
-
-    </div>
-  </body>
-
-</html>
