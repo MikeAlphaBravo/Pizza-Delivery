@@ -30,70 +30,6 @@ Pizza.prototype.buildOrder = function() {
   $("#outputName").text("Thank you " + this.name + "!");
 }
 
-//global scope variable
-// var newPizza;
-//
-// function pizzaParts(sauces, cheeses, veggies, meats, size, toppingsList) {
-//   this.choiceSauces = sauces;
-//   this.choiceCheeses = cheeses;
-//   this.choiceVeggies = veggies;
-//   this.choiceMeats = meats;
-//   this.choiceSize = size;
-//   this.toppingsList = toppingsList;
-// }
-//
-// function pizzaBuild() {
-//   var inputtedSauces = [];
-//   var inputtedCheeses = [];
-//   var inputtedVeggies = [];
-//   var inputtedMeats = [];
-//   var inputtedSize = $("select#pizzaSize").val();
-//   var calculatedToppingsList;
-// }
-//
-// newPizza = new Pizza(inputtedSauces, inputtedCheeses, inputtedVeggies, inputtedMeats, inputtedSize, 0);
-// newPizza.toppingsList = newPizza.sauces.length + newPizza.cheeses.length + newPizza.veggies.length + newPizza.meats.length;
-//
-// $("#selectedSize").text(newPizza.size)
-//
-// newPizza.sauces.forEach(function(sauce) {
-//   $("ul#selectedSauces").append("<li>" + sauces + "</li>");
-// })
-// newPizza.cheeses.forEach(function(cheese) {
-//   $("ul#selectedCheese").append("<li>" + cheeses + "</li>");
-// })
-// newPizza.veggies.forEach(function(veggie) {
-//   $("ul#selectedVeggies").append("<li>" + veggies + "</li>");
-// })
-// newPizza.meats.forEach(function(meat) {
-//   $("ul#selectedMeats").append("<li>" + meats + "</li>");
-// })
-//
-// $(".orderForm").show();
-//
-// Order.prototype.costing = function() {
-//   var startPrice = 8;
-//   var toppingTotal;
-//   var orderTotal;
-//
-//   if (this.toppingsList <= 3) {
-//     toppingsTotal = 0;
-//   } else if (this.toppingsList > 3) {
-//     toppingsTotal = (this.toppingsList -3) * 1;
-//   }
-//   orderTotal = startPrice + toppingsTotal
-//   if (this.size = "10in. Personal Pie") {
-//     pizzaTotal = orderTotal;
-//   } else if (this.size = "15in. Medium") {
-//     pizzaTotal = orderTotal + 2;
-//   } else if (this.size = "20in. Large") {
-//     pizzaTotal = orderTotal + 4;
-//   } else if (this.size = "25in. Family Size Pie") {
-//     pizzaTotal = orderTotal + 6;
-//   }
-//   $("#totalCost").text(pizzaTotal);
-// }
-
 // function Contact(first, last) {
 //   this.firstName = first;
 //   this.lastName = last;
@@ -107,8 +43,6 @@ Pizza.prototype.buildOrder = function() {
 //   this.state = state;
 //   this.zipCode = zipCode;
 // }
-//
-//
 // Address.prototype.fullAddress = function() {
 //   return this.phone + " " + this.street + ", " + this.city + " " + this.state + " " + this.zipCode;
 // };
@@ -128,7 +62,7 @@ Pizza.prototype.buildOrder = function() {
 //user logic (Front-end)
 $(document).ready(function() {
   var thisPizza = new Pizza();
-  $("#inputName").click(function(event) {
+  $("#submitName").click(function(event) {
     event.preventDefault();
     thisPizza.orderName();
   })
@@ -139,33 +73,6 @@ $(document).ready(function() {
     $(".results").show();
   })
 });
-
-
-// $(document).ready(function() {
-//
-//   $("form.orderForm").submit(function(event) {
-//     event.preventDefault();
-//       $("#orderSummary").show();
-//       $("input:checkbox[name=sauces]:checked").each(function(){
-//         var sauces = $(this).val();
-//       })
-//       $("input:checkbox[name=cheeses]:checked").each(function(){
-//         var cheeses = $(this).val();
-//       })
-//       $("input:checkbox[name=veggies]:checked").each(function(){
-//         var veggies = $(this).val();
-//       })
-//       $("input:checkbox[name=meats]:checked").each(function(){
-//         var meats = $(this).val();
-//       })
-//       pizzaBuild();
-//       newPizza.costing();
-//     });
-
-      // $("#deliverySummary").show();
-      // $("input:checkbox[name=orderSize]:checked").each(function(){
-      //   var listOrderSize = $(this).val();
-      //   $('#pizzaSize').append(listOrderSize + "<br>");
 
     // var inputtedFirstName = $("input#new-first-name").val();
     // var inputtedLastName = $("input#new-last-name").val();
