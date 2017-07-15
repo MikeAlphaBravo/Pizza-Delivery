@@ -1,6 +1,6 @@
 # _Pizza-Delivery_
 
-#### _Object Oriented Design Project for Epicodus, July 13, 2017_
+#### _Object Oriented Design Project for Epicodus, July 15, 2017_
 
 #### By _**Michael A. Brooks
   *and the countless generous souls who've looked at my work and helped along the way**_
@@ -11,7 +11,7 @@ _My Website has been written for personal purposes only and is not for profit. U
 
 ## Just follow this link to view website or developer's info
 
-https://github.com/MikeAlphaBravo/Pizza-Delivery
+https://MikeAlphaBravo.github.io/Pizza-Delivery
 
 Bootstrap and JQuery codes are included in the file structure and referred to in the HTML but make sure latest versions are in place.
 

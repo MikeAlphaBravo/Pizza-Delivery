@@ -30,6 +30,8 @@ Pizza.prototype.buildOrder = function() {
   $("#outputName").text("Thank you " + this.name + "!");
 }
 
+//address info to integrate before more css
+
 // function Contact(first, last) {
 //   this.firstName = first;
 //   this.lastName = last;
@@ -74,6 +76,7 @@ $(document).ready(function() {
   })
 });
 
+//address info to integrate before more css
     // var inputtedFirstName = $("input#new-first-name").val();
     // var inputtedLastName = $("input#new-last-name").val();
     // var newContact = new Contact(inputtedFirstName, inputtedLastName);
